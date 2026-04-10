@@ -25,9 +25,13 @@ SECRET_KEY = 'django-insecure-a7p9^*5qll0ppkal+hinzsfv!dv)kdsk7gh=r@fcxjh*%w_j#e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*",  "oil-monitor-d8va.onrender.com", "http://localhost:3000"]
+ALLOWED_HOSTS = ["*",  "oil-monitor-d8va.onrender.com", "http://localhost:3000", "http://localhost:3003", "fuelblack-market-protector.vercel.app"]
 CSRF_TRUSTED_ORIGINS = [
     "https://oil-monitor-d8va.onrender.com",
+    "https://fuelblack-market-protector.vercel.app",
+    "http://localhost:3000",
+    "http://localhost:3003",
+
 ]
 
 
