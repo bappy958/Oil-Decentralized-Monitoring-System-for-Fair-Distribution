@@ -5,7 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-a7p9^*5qll0ppkal+hinzsfv!dv)kdsk7gh=r@fcxjh*%w_j#e'
 
-DEBUG = True
+DEBUG = False
 
 
 # =========================
@@ -14,9 +14,6 @@ DEBUG = True
 ALLOWED_HOSTS = [
     "oil-monitor-d8va.onrender.com",
     "fuelblack-market-protector.vercel.app",
-    "localhost",
-    "127.0.0.1",
-    "*"
 ]
 
 
@@ -33,6 +30,7 @@ INSTALLED_APPS = [
 
     "rest_framework",
     "corsheaders",
+    "whitenoise",
     "backend",
 ]
 
@@ -42,6 +40,7 @@ INSTALLED_APPS = [
 # =========================
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
@@ -105,3 +104,4 @@ USE_TZ = True
 
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
