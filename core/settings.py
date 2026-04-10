@@ -33,6 +33,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://fuelblack-market-protector.vercel.app",
     "http://localhost:3000",
     "http://localhost:3003",
+    'https://*.127.0.0.1'
 ]
 
 
