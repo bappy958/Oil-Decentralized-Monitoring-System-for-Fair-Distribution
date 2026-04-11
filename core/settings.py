@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     "rest_framework",
     "corsheaders",
+    "django_crontab",
     "whitenoise",
     "backend",
 ]
@@ -74,6 +75,9 @@ ROOT_URLCONF = 'core.urls'
 
 WSGI_APPLICATION = 'core.wsgi.application'
 
+CRONJOBS = [
+    ('*/3 * * * *', 'backend.cron.cleanup_inventory_logs'),
+]
 
 DATABASES = {
     'default': {
